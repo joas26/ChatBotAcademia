@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_tela_inicio"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Inicio" />
+
+        <item
+            android:id="@+id/nav_tela_treino"
+            android:icon="@drawable/ic_treino"
+            android:title="Treino" />
+
+        <item
+            android:id="@+id/nav_tela_chatbot"
+            android:icon="@drawable/ic_malhar"
+            android:title="Treinar" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_tela_compartilhar"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Compartilhar" />
+
+            <item
+                android:id="@+id/nav_tela_sobre"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="Sobre" />
+
+        </menu>
+    </item>
+
+
+
+
+</menu>
