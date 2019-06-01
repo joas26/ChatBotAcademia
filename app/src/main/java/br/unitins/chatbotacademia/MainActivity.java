@@ -26,14 +26,14 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        //FloatingActionButton fab = findViewById(R.id.fab);
+        /*fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -84,12 +84,11 @@ public class MainActivity extends AppCompatActivity
        // FragmentManager fragmentManager = getFragmentManager();
         if (id == R.id.nav_tela_inicio) {
 
-            FragmentoTelaInicio fragment = new FragmentoTelaInicio();
+           FragmentoTelaInicio fragment = new FragmentoTelaInicio();
             android.support.v4.app.FragmentTransaction fragmentTrasaction =
                     getSupportFragmentManager().beginTransaction();
 
-            fragmentTrasaction.replace(R.id.fragment_container,fragment);
-            fragmentTrasaction.commit();
+
             // Handle the camera action
         }else if (id == R.id.nav_tela_treino) {
 
@@ -110,7 +109,20 @@ public class MainActivity extends AppCompatActivity
             fragmentTrasaction.replace(R.id.fragment_container,fragment);
             fragmentTrasaction.commit();
         }
+        else if (id == R.id.nav_tela_chatbotWatson) {
+
+            ChatWatson fragment = new ChatWatson();
+            android.support.v4.app.FragmentTransaction fragmentTrasaction =
+                    getSupportFragmentManager().beginTransaction();
+
+            fragmentTrasaction.replace(R.id.fragment_container,fragment);
+            fragmentTrasaction.commit();
+
+        }
+
          else if (id == R.id.nav_tela_compartilhar) {
+
+
 
 
         }
