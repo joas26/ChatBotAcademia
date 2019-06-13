@@ -30,7 +30,6 @@
         <activity android:name=".ExemploZxingIntegration"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ExemploPassagemParametro" />
         <activity
             android:name=".ChatWatson"
             android:screenOrientation="portrait">

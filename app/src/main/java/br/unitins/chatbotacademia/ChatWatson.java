@@ -58,6 +58,8 @@ import java.util.ArrayList;
 
 public class ChatWatson extends Fragment {
 
+    private Context context;
+
     public ChatWatson() {
         // Required empty public constructor
     }
@@ -243,6 +245,12 @@ public class ChatWatson extends Fragment {
 
   }
 
+    @Override
+    public void onAttach(Context context) {
+        this.context = context;
+        super.onAttach(context);
+    }
+
   protected void makeRequest() {
     ActivityCompat.requestPermissions(getActivity(),
       new String[]{Manifest.permission.RECORD_AUDIO},
@@ -379,7 +387,7 @@ public class ChatWatson extends Fragment {
               outMessage1.setMessage(obj.getString("nome"));
               messageArrayList.add(outMessage1);
 
-              getActivity().runOnUiThread(new Runnable() {
+             getActivity().runOnUiThread(new Runnable() {
                 public void run() {
                   mAdapter.notifyDataSetChanged();
                   if (mAdapter.getItemCount() > 1) {

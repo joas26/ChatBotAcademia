@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="150sp">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/exercicio"
+        android:layout_width="178dp"
+        android:layout_height="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="187dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="65dp"
+        android:gravity="top|center_horizontal"
+        android:text="TextView" />
+
+
+    <TextView
+        android:id="@+id/equipamento"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="1dp"
+        android:text="Detalhes" />
+
+
+    <TextView
+        android:id="@+id/diasemana"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="-18dp"
+        android:text="Dia" />
+
+
+
+
+</RelativeLayout>
+
