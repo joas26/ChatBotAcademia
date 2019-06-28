@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -7,11 +8,24 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent">
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="302dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:editable="false"
+                android:text="Aplicativo desenvolvido pelo Academico Joás Castro ao Curso de Sistemas de Informação da Fundação Universidade do Tocan-tins - UNITINS como parte dos requisitos para a obtenção do grau de Bacharel em Sistemas de Informação, sob a orientação do professor Me. Silvano Malfatti"
+                tools:ignore="Deprecated" />
+        </android.support.design.widget.TextInputLayout>
+
+
         <TextView
 
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:text="TELA SOBRE"/>
+            android:layout_width="354dp"
+            android:layout_height="305dp"
+            android:text="SOBRE" />
 
     </FrameLayout>
 </RelativeLayout>

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 repositories {
     maven {
-        url  "https://dl.bintray.com/ibm-cloud-sdks/ibm-cloud-sdk-repo"
+        url "https://dl.bintray.com/ibm-cloud-sdks/ibm-cloud-sdk-repo"
     }
 }
 
@@ -38,8 +38,8 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    implementation 'com.android.support:appcompat-v7:26.0.0'
-    implementation 'com.android.support:recyclerview-v7:26.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.android.support:design:28.0.0'
@@ -57,6 +57,7 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.bumptech.glide:glide:3.5.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
 

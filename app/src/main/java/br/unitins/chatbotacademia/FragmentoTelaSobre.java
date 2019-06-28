@@ -14,6 +14,7 @@ public class FragmentoTelaSobre extends Fragment {
 
         minhaView = inflater.inflate(R.layout.layout_sobre, container,false);
         return minhaView;
+
     }
 
 }

@@ -21,7 +21,7 @@ public class Adapter  extends RecyclerView.Adapter<ItemHolder>{
     ArrayList<ItemTreino> lista = null;
 
     Adapter(Context contexto, ArrayList<ItemTreino> lista ){
-        this.contexto = contexto;
+        this.contexto =  contexto;
         this.lista = lista;
     }
 
@@ -51,8 +51,6 @@ public class Adapter  extends RecyclerView.Adapter<ItemHolder>{
         holder.equipamento.setText(item.equipamento);
         holder.diaSemana.setText(item.diaSemana);
         holder.imagem.setImageBitmap(BitmapFactory.decodeResource(contexto.getResources(), item.urlImagem));
-
-
 
     }
 

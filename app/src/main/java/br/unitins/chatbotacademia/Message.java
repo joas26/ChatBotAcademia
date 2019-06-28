@@ -1,7 +1,7 @@
 package br.unitins.chatbotacademia;
 
 /**
- * Created by VMac on 17/11/16.
+ *
  */
 
 import android.widget.ImageView;

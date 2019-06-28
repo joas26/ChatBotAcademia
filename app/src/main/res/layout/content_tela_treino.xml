@@ -8,43 +8,48 @@
     tools:context="br.unitins.chatbotacademia.FragmentoTelaTreino"
     tools:showIn="@layout/layout_treino">
 
-
+    <!--
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/recycler_view1"
-        android:layout_alignTop="@+id/layoutRecycler"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginBottom="12dp"
-        android:text="Atualizar"
-        android:id="@+id/atualizar"/>
-
-    <RelativeLayout
+        android:id="@+id/atualizar"
+        android:layout_width="245dp"
+        android:layout_height="57dp"
+        android:text="Atualizar" />
+-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/layoutRecycler">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view1"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="670dp">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/botaoAtualizar"
+            android:layout_width="56dp"
+            android:layout_height="54dp"
+            android:layout_above="@+id/botaoEnviar"
+            android:layout_alignEnd="@+id/recycler_view1"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="96dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginBottom="445dp"
-            android:scrollbars="vertical"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="404dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.121"
+            app:srcCompat="@drawable/ic_atualiza" />
 
+    </android.support.constraint.ConstraintLayout>
 
-    </RelativeLayout>
 
 </RelativeLayout>

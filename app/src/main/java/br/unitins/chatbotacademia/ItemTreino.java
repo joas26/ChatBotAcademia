@@ -16,7 +16,6 @@ class ItemHolder extends RecyclerView.ViewHolder{
     TextView equipamento = null;
     TextView diaSemana = null;
 
-
     ItemHolder(View view){
         super(view);
         imagem = (ImageView)view.findViewById(R.id.imageView);
@@ -27,18 +26,19 @@ class ItemHolder extends RecyclerView.ViewHolder{
 }
 
 public class ItemTreino {
+
     String diaSemana;
     String exercicio;
     String equipamento;
     int urlImagem;
 
-    ItemTreino( String diaSemana,String exercicio, String equipamento,
-                int urlImagem){
+    ItemTreino( String dia,String exercicio1, String equipamento1,int url){
 
-        diaSemana = diaSemana;
-        exercicio = exercicio;
-        urlImagem = urlImagem;
-        equipamento = equipamento;
+        diaSemana = dia;
+        exercicio = exercicio1;
+        equipamento = equipamento1;
+        urlImagem = url;
+
 
     }
 }

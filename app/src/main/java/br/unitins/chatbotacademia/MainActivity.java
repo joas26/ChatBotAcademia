@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,14 +18,36 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+        private Integer idaluno;
+        private String nomeAluno;
+        private String emailAluno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
+        Intent it  = getIntent();
+        idaluno= it.getIntExtra("idPessoa",0);
+        nomeAluno  = it.getStringExtra("nome");
+        emailAluno = it.getStringExtra("email");
+
+        Log.i("nomeAluno ",nomeAluno);
+        Log.i("EmailAluno ",emailAluno);
+
+
+
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //FloatingActionButton fab = findViewById(R.id.fab);
@@ -36,6 +60,12 @@ public class MainActivity extends AppCompatActivity
         });*/
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
+        View hView =  navigationView.getHeaderView(0);
+        TextView nomeUsuario = (TextView) hView.findViewById(R.id.textNomeUsuario);
+        TextView EmailUsuario = (TextView) hView.findViewById(R.id.textEmailUsuario);
+        nomeUsuario.setText(nomeAluno);
+        EmailUsuario.setText(emailAluno);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -85,7 +115,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_tela_inicio) {
 
            FragmentoTelaInicio fragment = new FragmentoTelaInicio();
-            android.support.v4.app.FragmentTransaction fragmentTrasaction =
+            FragmentTransaction fragmentTrasaction =
                     getSupportFragmentManager().beginTransaction();
 
 
@@ -93,26 +123,23 @@ public class MainActivity extends AppCompatActivity
         }else if (id == R.id.nav_tela_treino) {
 
             FragmentoTelaTreino fragment = new FragmentoTelaTreino();
-            android.support.v4.app.FragmentTransaction fragmentTrasaction =
+            FragmentTransaction fragmentTrasaction =
                     getSupportFragmentManager().beginTransaction();
 
             fragmentTrasaction.replace(R.id.fragment_container,fragment);
             fragmentTrasaction.commit();
 
-        }//TREINAR
-         else if (id == R.id.nav_tela_chatbot) {
-
-            ChatbotFragment fragment = new ChatbotFragment();
-            android.support.v4.app.FragmentTransaction fragmentTrasaction =
-                    getSupportFragmentManager().beginTransaction();
-
-            fragmentTrasaction.replace(R.id.fragment_container,fragment);
-            fragmentTrasaction.commit();
         }
         else if (id == R.id.nav_tela_chatbotWatson) {
 
+
+
+
             ChatWatson fragment = new ChatWatson();
-            android.support.v4.app.FragmentTransaction fragmentTrasaction =
+            Bundle data = new Bundle();
+            data.putInt("id",idaluno);
+            fragment.setArguments(data);
+            FragmentTransaction fragmentTrasaction =
                     getSupportFragmentManager().beginTransaction();
 
             fragmentTrasaction.replace(R.id.fragment_container,fragment);
@@ -129,7 +156,7 @@ public class MainActivity extends AppCompatActivity
          else if (id == R.id.nav_tela_sobre) {
 
             FragmentoTelaSobre fragment = new FragmentoTelaSobre();
-            android.support.v4.app.FragmentTransaction fragmentTrasaction =
+            FragmentTransaction fragmentTrasaction =
                     getSupportFragmentManager().beginTransaction();
 
             fragmentTrasaction.replace(R.id.fragment_container,fragment);
